@@ -9,7 +9,7 @@
 // @author       DB9Max
 // @grant        none
 // @license      MIT
-// @match        *://*/*
+// @match        https://*/*
 // ==/UserScript==
 
 (function() {
