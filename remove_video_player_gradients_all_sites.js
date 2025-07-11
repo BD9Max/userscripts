@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Remove gradient from video controls
-// @description  Remove bottom gradient from HTML5 video progress bar and controls
-// @namespace    krbd99
-// @version      1.2
+// @name         Remove Gradients From Video Controls - All Sites
+// @description  Removes gradients from HTML5 video player + other video player controls on all sites
+// @namespace    DB9Max
+// @version      1.1
 // @run-at       document-end
-// @author       krbd99
+// @author       DB9Max
 // @grant        none
 // @license      MIT
 // @match        *://*/*
