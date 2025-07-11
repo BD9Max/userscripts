@@ -4,10 +4,10 @@
 // @namespace    https://github.com/BD9Max/userscripts
 // @updateURL    https://github.com/BD9Max/userscripts/raw/refs/heads/main/remove_video_player_gradients_all_sites.js
 // @icon         https://github.com/BD9Max/userscripts/raw/refs/heads/main/media/icons/remove_video_player_gradients.png
-// @version      1.0
+// @version      1.1
 // @run-at       document-end
 // @author       DB9Max
-// @grant        none
+// @grant        GM_addStyle
 // @license      MIT
 // @match        https://*/*
 // ==/UserScript==
@@ -115,5 +115,116 @@
     }
     
     window.addEventListener('load', forceRemoveGradients);
+
+    // Add extra styles for other video players
+GM_addStyle(`
+  /* Plyr */
+  .plyr__controls::before,
+  .plyr__controls {
+    background-image: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Video.js */
+  .vjs-control-bar::before,
+  .vjs-control-bar::after,
+  .vjs-control-bar {
+    background-image: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Vidstack (used in Stream, Vime, etc.) */
+  media-controller::part(controls),
+  media-controller::part(control-bar),
+  .vds-control-bar {
+    background-image: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* JW Player */
+  .jw-controlbar,
+  .jw-controlbar::before,
+  .jw-controlbar::after {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Ruffle (Flash emulator) */
+  ruffle-player::part(controls),
+  .ruffle-control-bar {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+/* TikTok */
+  .tiktok-1itcwxg-DivControlsContainer,
+  .tiktok-1itcwxg-DivControlsContainer::before,
+  .tiktok-1itcwxg-DivControlsContainer::after,
+  .tiktok-14i2jc-DivSeekBarBackground {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Instagram (Web) */
+  .x1lliihq,  /* IG overlay wrapper */
+  .x1i10hfl::before,
+  .x1i10hfl::after,
+  .xds687c,
+  .x1ypdohk {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Twitter (X) */
+  div[data-testid="videoPlayer"]::before,
+  div[data-testid="videoPlayer"]::after,
+  .r-1oszu61,  /* overlay area */
+  .r-14lw9ot {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+`);
+
+// Extended runtime cleanup for dynamically styled gradients
+const gradientSelectors = [
+  '.ytp-gradient-top',
+  '.ytp-gradient-bottom',
+  '.plyr__controls',
+  '.vjs-control-bar',
+  'media-controller::part(controls)',
+  'media-controller::part(control-bar)',
+  '.vds-control-bar',
+  '.jw-controlbar',
+  'ruffle-player::part(controls)',
+  '.ruffle-control-bar'
+];
+
+function removeGradientStyles() {
+  gradientSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      try {
+        el.style.background = 'transparent';
+        el.style.backgroundImage = 'none';
+        el.style.boxShadow = 'none';
+      } catch (e) {}
+    });
+  });
+}
+
+// Observe dynamically injected players
+const observer = new MutationObserver(removeGradientStyles);
+observer.observe(document.body, { childList: true, subtree: true });
+
+// Initial pass
+removeGradientStyles();
     
 })();
