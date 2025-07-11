@@ -4,7 +4,7 @@
 // @namespace    https://github.com/BD9Max/userscripts
 // @updateURL    https://github.com/BD9Max/userscripts/raw/refs/heads/main/remove_video_player_gradients_all_sites.js
 // @icon         https://github.com/BD9Max/userscripts/raw/refs/heads/main/media/icons/remove_video_player_gradients.png
-// @version      1.1
+// @version      1.2
 // @run-at       document-end
 // @author       DB9Max
 // @grant        GM_addStyle
@@ -116,7 +116,7 @@
     
     window.addEventListener('load', forceRemoveGradients);
 
-    // Add extra styles for other video players
+// Add extra styles for other video players
 GM_addStyle(`
   /* Plyr */
   .plyr__controls::before,
@@ -192,6 +192,39 @@ GM_addStyle(`
     box-shadow: none !important;
   }
 
+/* Facebook */
+  .x1lliihq, /* shared with Instagram */
+  .x6s0dn4,
+  .x1n2onr6,
+  .x5yr21d,
+  .x78zum5,
+  .x1pi30zi {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Vimeo */
+  .vp-controls,
+  .vp-controls::before,
+  .vp-bottom-gradient,
+  .vp-gradient-top,
+  .vp-gradient-bottom {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Dailymotion */
+  .dmp_ControlBar,
+  .dmp_ControlBar::before,
+  .dmp_Overlay,
+  .dmp_UIOverlay {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
 `);
 
 // Extended runtime cleanup for dynamically styled gradients
@@ -206,6 +239,24 @@ const gradientSelectors = [
   '.jw-controlbar',
   'ruffle-player::part(controls)',
   '.ruffle-control-bar'
+
+// Facebook
+  '.x6s0dn4',
+  '.x1n2onr6',
+  '.x5yr21d',
+  '.x78zum5',
+  '.x1pi30zi',
+
+  // Vimeo
+  '.vp-controls',
+  '.vp-bottom-gradient',
+  '.vp-gradient-top',
+  '.vp-gradient-bottom',
+
+  // Dailymotion
+  '.dmp_ControlBar',
+  '.dmp_Overlay',
+  '.dmp_UIOverlay'
 ];
 
 function removeGradientStyles() {
