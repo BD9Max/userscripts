@@ -2,7 +2,7 @@
 // @name         Remove Gradients From Video Controls - All Sites
 // @description  Removes gradients from HTML5 video players + other video players controls on all sites
 // @namespace    https://github.com/BD9Max/userscripts
-// @update       https://github.com/BD9Max/userscripts/raw/refs/heads/main/remove_video_player_gradients_all_sites.js
+// @updateURL    https://github.com/BD9Max/userscripts/raw/refs/heads/main/remove_video_player_gradients_all_sites.js
 // @icon         https://github.com/BD9Max/userscripts/raw/refs/heads/main/media/icons/remove_video_player_gradients.png
 // @version      1.0
 // @run-at       document-end
