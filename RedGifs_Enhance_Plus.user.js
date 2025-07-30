@@ -7,7 +7,7 @@
 // @license MIT
 // @updateURL https://github.com/BD9Max/userscripts/raw/refs/heads/main/RedGifs_Enhance_Plus.user.js
 // @downloadURL https://github.com/BD9Max/userscripts/raw/refs/heads/main/RedGifs_Enhance_Plus.user.js
-// @version 2.2.40.2
+// @version 2.40.2
 // @match *://*.gifdeliverynetwork.com/*
 // @match *://cdn.embedly.com/widgets/media.html?src=*://*.redgifs.com/*
 // @match *://*.redgifs.com/*
