@@ -171,7 +171,7 @@ infinite-scroll-component {
   min-height: 0px !important;
 }
 .skyWrapper > .middle {
-  width: 70% !important;
+  width: 95% !important;
 }
 /* OUTTER FEED CONTAINERS */
 
