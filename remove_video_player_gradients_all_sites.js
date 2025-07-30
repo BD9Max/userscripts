@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Remove Gradients From Video Controls - All Sites
-// @description  Removes gradients from HTML5 video players + other video players controls on all sites
+// @description  Removes bottom gradients (seekbar) from HTML5 video players + other video players controls on all sites.
 // @namespace    https://github.com/BD9Max/userscripts
 // @updateURL    https://raw.githubusercontent.com/BD9Max/userscripts/refs/heads/main/remove_video_player_gradients_all_sites.js
 // @downloadURL  https://raw.githubusercontent.com/BD9Max/userscripts/refs/heads/main/remove_video_player_gradients_all_sites.js
 // @icon         https://github.com/BD9Max/userscripts/raw/refs/heads/main/media/icons/remove_video_player_gradients.png
-// @version      1.3
+// @version      1.3.1
 // @run-at       document-end
 // @author       DB9Max
 // @grant        GM_addStyle
