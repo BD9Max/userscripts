@@ -7,7 +7,7 @@
 // @license MIT
 // @updateURL https://github.com/BD9Max/userscripts/raw/refs/heads/main/RedGifs_Enhance_Plus.user.js
 // @downloadURL https://github.com/BD9Max/userscripts/raw/refs/heads/main/RedGifs_Enhance_Plus.user.js
-// @version 2.2.40.1
+// @version 2.2.40.2
 // @match *://*.gifdeliverynetwork.com/*
 // @match *://cdn.embedly.com/widgets/media.html?src=*://*.redgifs.com/*
 // @match *://*.redgifs.com/*
@@ -171,7 +171,7 @@ infinite-scroll-component {
   min-height: 0px !important;
 }
 .skyWrapper > .middle {
-  width: 95% !important;
+  width: 70% !important;
 }
 /* OUTTER FEED CONTAINERS */
 
