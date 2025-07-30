@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name RedGifs Enhance Plus
 // @author BD9Max
-// @description Auto-HD mode, Download button, UI improvements - works in embeds too
+// @description Auto-HD mode, Download button, AdBlock, UI improvements - works in embeds too
 // @icon https://www.google.com/s2/favicons?sz=64&domain=redgifs.com
 // @namespace https://github.com/BD9Max/userscripts
 // @license MIT
