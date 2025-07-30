@@ -5,8 +5,8 @@
 // @icon https://www.google.com/s2/favicons?sz=64&domain=redgifs.com
 // @namespace https://github.com/BD9Max/userscripts
 // @license MIT
-// @updateURL https://github.com/BD9Max/userscripts/RedGifs_Enhance_Plus.user.js
-// @downloadURL https://github.com/BD9Max/userscripts/raw/master/RedGifs_Enhance_Plus.user.js
+// @updateURL https://github.com/BD9Max/userscripts/raw/refs/heads/main/RedGifs_Enhance_Plus.user.js
+// @downloadURL https://github.com/BD9Max/userscripts/raw/refs/heads/main/RedGifs_Enhance_Plus.user.js
 // @version 2.2.40
 // @match *://*.gifdeliverynetwork.com/*
 // @match *://cdn.embedly.com/widgets/media.html?src=*://*.redgifs.com/*
