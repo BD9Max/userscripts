@@ -125,7 +125,7 @@ StringBuilder.prototype.append = function (value)
     {
         this.strings.push(value);
     }
-}
+};
 StringBuilder.prototype.clear = function ()
 {
     this.strings.length = 0;
