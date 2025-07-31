@@ -2,7 +2,7 @@
 // @name X/Twitter Enhance Plus
 // @description Display images & videos in HD, Download videos & images, Change timelines width, Tweak posts thumbnails cropping
 // @author BD9Max
-// @version 2.2.92
+// @version 2.5
 // @license MIT
 // @namespace https://github.com/BD9Max/userscripts
 // @icon https://github.com/BD9Max/userscripts/raw/refs/heads/main/media/icons/X-Twitter_Enhance_Plus.png
