@@ -278,20 +278,25 @@ function processXMLOpen(thisRef, method, url)
         {
             if (toggleHQVideo.enabled && thisRef.readyState === 4)
             {
-                let json = JSON.parse(e.target.response);
-                let vidInfo = json.extended_entities?.media?.video_info ?? null;
+                try {
+                    let json = JSON.parse(e.target.response);
+                    let vidInfo = json.extended_entities?.media?.video_info ?? null;
 
-                if(vidInfo != null && vidInfo.variants != null && vidInfo.variants.length > 2)
-                {
-                    vidInfo.variants = stripVariants(vidInfo.variants, true);
-                    Object.defineProperty(thisRef, 'response', { writable: true });
-                    Object.defineProperty(thisRef, 'responseText', { writable: true });
+                    if(vidInfo != null && vidInfo.variants != null && vidInfo.variants.length > 2)
+                    {
+                        vidInfo.variants = stripVariants(vidInfo.variants, true);
+                        delete thisRef.response;
+                        delete thisRef.responseText;
 
-                    thisRef.response = thisRef.responseText = JSON.stringify(json);
+                        thisRef.response = thisRef.responseText = JSON.stringify(json);
+                    }
+                } catch (error) {
+                    console.error('Error processing video response:', error);
                 }
             }
         });
     }
+
     else if(url.includes("/graphql/"))
     {
         thisRef.addEventListener('readystatechange', function (req)
