@@ -26,7 +26,7 @@
 // @run-at document-start
 // @require https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
 // ==/UserScript==
-// 
+
 const cooky = getCookie("ct0"); //Get current X session token so we can use Twitter API to request higher quality content
 const modifiedAttr = "THD_modified";
 const GM_OpenInTabMissing = (typeof GM_openInTab === 'undefined');
