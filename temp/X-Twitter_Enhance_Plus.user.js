@@ -129,7 +129,7 @@ StringBuilder.prototype.append = function (value)
 StringBuilder.prototype.clear = function ()
 {
     this.strings.length = 0;
-}
+};
 StringBuilder.prototype.toString = function ()
 {
     return this.strings.join("");
