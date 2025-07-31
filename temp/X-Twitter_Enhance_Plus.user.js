@@ -199,7 +199,7 @@ const filterVideoSources = function (m3u8)
 
             if(index > 8)
             {
-                let audioGroup = avcLine.substr(index).split('"')[0];
+                let audioGroup = avcLine.substring(index).split('"')[0];
                 for (let i = 1; i < lines.length; i++)
                 {
                     let line = lines[i];
