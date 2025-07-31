@@ -116,7 +116,7 @@ const isGM = (typeof GM_addValueChangeListener === 'undefined');
 //<--> POST PROCESSING <-->//
 function StringBuilder(value)
 {
-    this.strings = new Array();
+    this.strings = new Array[];
     this.append(value);
 }
 StringBuilder.prototype.append = function (value)
