@@ -6,5 +6,5 @@ https://greasyfork.org/en/users/814427-bd9max?sort=updated
 ## Reddit Antiduplicate content
 https://greasyfork.org/en/scripts/581301-reddit-antiduplicate-content
 
-## X/Twitter Media Grid Filters
-https://greasyfork.org/en/scripts/583507-x-twitter-media-grid-filters
+## X/Twitter - xGrid Media Timeline
+https://greasyfork.org/en/scripts/583650-x-twitter-xgrid-media-timeline
